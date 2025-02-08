@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine Love Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFEBEF;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+
+    .gif-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      z-index: 1;
+    }
+
+    .gif-container img {
+      width: 300px;
+      height: auto;
+    }
+
+    .text {
+      font-size: 2rem;
+      color: #D6336C;
+      text-align: center;
+      z-index: 1;
+      margin-top: 20px;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -100px;
+      width: 50px;
+      height: 45px;
+      background: red;
+      transform: rotate(-45deg);
+      animation: floatUp 5s infinite ease-in;
+      opacity: 0.8;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 45px;
+      background: inherit;
+      border-radius: 50%;
+    }
+
+    .heart:before {
+      top: -25px;
+      left: 0;
+    }
+
+    .heart:after {
+      left: 25px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-110vh) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gif-container">
+    <img src="./dudu5.gif" alt="Happy Bear and Friend">
+  </div>
+  <div class="text">Myyyy babyyyyyy, my bubuuuuuu,</div>
+  <div class="text">yayyyyyyy i love you soooo muchhhhh</div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      document.body.appendChild(heart);
+
+      const size = Math.random() * 40 + 20; // Random size between 20px and 60px
+      heart.style.width = `${size}px`;
+      heart.style.height = `${size * 0.9}px`;
+
+      const color = Math.random() > 0.5 ? '#FF69B4' : '#FF0000'; // Pink or Red
+      heart.style.background = color;
+
+      const leftPosition = Math.random() * 100;
+      heart.style.left = `${leftPosition}vw`;
+
+      const duration = Math.random() * 3 + 3; // Between 3s and 6s
+      heart.style.animationDuration = `${duration}s`;
+
+      setTimeout(() => {
+        heart.remove();
+      }, duration * 1000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>

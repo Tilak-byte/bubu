@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine Response 3</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFEBEF;
+      position: relative;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 90px;
+      color: #D6336C;
+      margin: 20px 0;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #D6336C;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 60px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      background-color: #D6336C;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #B22258;
+    }
+
+    .heart {
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background: #FFC0CB;
+      transform: rotate(-45deg);
+    }
+
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background: #FFC0CB;
+      border-radius: 50%;
+    }
+
+    .heart:before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart:after {
+      left: 50px;
+      top: 0;
+    }
+
+    .heart.top-left {
+      top: 20px;
+      left: 20px;
+      opacity: 0.3;
+    }
+
+    .heart.bottom-right {
+      bottom: 20px;
+      right: 20px;
+      opacity: 0.3;
+    }
+
+    .gif-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .gif-container img {
+      width: 150px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart top-left"></div>
+  <div class="heart bottom-right"></div>
+  <div class="gif-container">
+    <img src="./dudu4.gif" alt="Angry Bear">
+  </div>
+  <h1>AB BASS!!!</h1>
+  <h2>chup chaap yes pe daboo</h2>
+  <div class="buttons">
+    <a href="dudu4.html" class="btn">Yes</a>
+  </div>
+</body>
+</html>
